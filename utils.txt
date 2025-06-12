@@ -1,0 +1,8 @@
+- para correr el test
+npx cypress run --browser chrome 
+
+
+- abrir el cypress y correr manualmente los test
+npx cypress open 
+
+Me quede en el minuto del video de la clase 9: 1:05:45
