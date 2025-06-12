@@ -1,9 +1,9 @@
 import user from '../fixtures/user.json';
 
-const pageHome = require('../support/page_objects/pageHome');
-const commonObjects = require('../support/page_objects/commonObjects');
-const pageLogin = require('../support/page_objects/pageLogin');
-const pageVisit = require('../support/page_objects/pageVisit');
+const pageHome = require('../support/Page_objects/PageHome');
+const commonObjects = require('../support/Page_objects/CommonObjects');
+const pageLogin = require('../support/Page_objects/PageLogin');
+const pageVisit = require('../support/Page_objects/PageVisit');
 
 
 
