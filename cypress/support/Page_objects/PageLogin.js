@@ -19,7 +19,8 @@ class PageLogin
 
 	OnClickLoginButton()
 	{
-		cy.get('button[type="submit"]').should('be.visible').click();
+		cy.get('app-login button').contains('Login').should('be.visible').click();
 	}
+	
 }export default new PageLogin();
 

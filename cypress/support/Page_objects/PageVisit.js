@@ -1,9 +1,11 @@
+import { urls } from '../../config';
+
 
 class PageVisit 
 {	
 	VisitPage(visitUrl)
 	{
-		let visitUrl = url || 'https://bookcart.azurewebsites.net/';
+		let visitUrl = visitUrl || urls.url;
 
 		cy.visit(visitUrl);
 	}
