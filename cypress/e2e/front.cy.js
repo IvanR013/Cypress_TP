@@ -29,9 +29,11 @@ describe('Pruebas de Front-End', () => {
     pageHome.cartBadge().contains('1').should('be.visible');
 
     //Accion Paso 3: Click en el icono del carrito
-    cy.get('app-nav-bar button').contains('shopping_cart').click();
     
-    //Resultados esperados Paso 3:
+    cy.get('app-nav-bar button').contains('shopping_cart').click();
+
+
+    //Resultados esperados Paso 3: 
     
     //Verificar que la url sea la del carrito
     cy.url().should('include', 'https://bookcart.azurewebsites.net/shopping-cart');
