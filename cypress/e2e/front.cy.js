@@ -1,4 +1,5 @@
 import user from '../fixtures/user.json';
+import checkout from '../fixtures/Checkout.json';
 
 const pageHome = require('../support/Page_objects/PageHome');
 const commonObjects = require('../support/Page_objects/CommonObjects');
@@ -25,11 +26,10 @@ describe('Pruebas de Front-End', () => {
     pageHome.addToCartButton();
 
     //Resultados esperados Paso 2:
-    cy.contains('One Item added to cart').should('be.visible');
+    cy.Contains('One Item added to cart');
     pageHome.cartBadge().contains('1').should('be.visible');
 
     //Accion Paso 3: Click en el icono del carrito
-    
     cy.get('app-nav-bar button').contains('shopping_cart').click();
 
 
@@ -39,11 +39,25 @@ describe('Pruebas de Front-End', () => {
     cy.url().should('include', 'https://bookcart.azurewebsites.net/shopping-cart');
     
     //Visualizar el libro que añadimos en el carrito
-    cy.get('app-shoppingcart').contains('Harry Potter and the Chamber of Secrets').should('be.visible');
+    cy.get('app-shoppingcart').Contains('Harry Potter and the Chamber of Secrets');
 
-    //Responsabilidad de los alumnos, completar pasos faltantes, 4 al 7
+    
+    // Paso 4 Click en checkout
+    cy.get('app-shoppingcart button').Contains('Checkout').click();
 
-  })
+    // Paso 5 completar form
+    cy.get('input[formcontrolname="name"]').shouldbe('visible').type(user.username);
+    cy.get('input[formcontrolname="addressLine1"]').shouldbe('visible').type(checkout.adrss1);
+    cy.get('input[formcontrolname="addressLine2"]').shouldbe('visible').type(checkout.adrss2);
+    cy.get('input[formcontrolname="pincode"]').shouldbe('visible').type(checkout.pincode);
+    cy.get('input[formcontrolname="state"]').shouldbe('visible').type(checkout.state);
+  
+  // Paso 6 click en comprar
+  commonObjects.OnClickButton('Place Order').click();
+  });
+
+
+
 
   it('Nombre del caso de prueba 2 - responsabilidad de los alumnos', () => 
   {

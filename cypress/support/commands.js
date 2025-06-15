@@ -19,6 +19,6 @@ Cypress.Commands.add('login', (username, password) => {
     }).then((response) => {
       expect(response.status).to.eq(200);
     }
-  )
+  );
 
  });
