@@ -3,23 +3,19 @@ import user from '../../fixtures/user.json';
 
 class PageLogin
 {
-	TypeUsername(username)
+	TypeUsername()
 	{
-		// Podés opcionalmente pasarle un username custom o usar el de user.json por defecto
-		let user = username || user.username;
 		cy.get('input[formcontrolname="username"]').should('be.visible').type(user.username);
 	}
 
-
-	TypePassword(password)
+	clickLoginButton()
 	{
-		let pass = password || user.password;
-		cy.get('input[formcontrolname="password"]').should('be.visible').type(pass);
+		cy.get('button[mat-raised-button]').should('be.visible').and('not.be.disabled').contains('Login').click();
 	}
 
-	OnClickLoginButton()
+	TypePassword()
 	{
-		cy.get('app-login button').contains('Login').should('be.visible').click();
+		cy.get('input[formcontrolname="password"]').should('be.visible').type(user.password);
 	}
 	
 }export default new PageLogin();

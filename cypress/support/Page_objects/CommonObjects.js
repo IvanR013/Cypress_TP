@@ -1,14 +1,5 @@
-import { urls } from "../../fixtures/urls.json";
-import { Contents } from "../../fixtures/Contents.json";
-
-
 class CommonObjects 
 {
-    checkUrl(url) 
-    {
-        let _url = URL || urls.url;
-        cy.url().should('include', _url);
-    }
 
     Contains(content)
     {
@@ -18,7 +9,6 @@ class CommonObjects
 
 	OnClickButton(buttonText)
 	{
-		let _buttonText = _buttonText || Contents.ButtonText1;
 		return	cy.get('button').contains(buttonText).should('be.visible');
 	}
 	

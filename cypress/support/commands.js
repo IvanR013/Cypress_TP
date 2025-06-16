@@ -7,6 +7,30 @@ Cypress.Commands.add('login', (username, password) => {
 
  });
 
+ Cypress.Commands.add('VisitWebsite', (url) => 
+  {
+		cy.visit(url);
+  }
+);
+
+Cypress.Commands.add('checkURL', (url) => 
+  {
+    cy.url().should('include', url);
+  }
+);
+
+  Cypress.Commands.add('fillCheckoutForm', (checkoutData) => 
+  {
+    cy.get('input[formcontrolname="name"]').should('be.visible').type(checkoutData.name);
+    cy.get('input[formcontrolname="addressLine1"]').should('be.visible').type(checkoutData.adrss1);
+    cy.get('input[formcontrolname="addressLine2"]').should('be.visible').type(checkoutData.adrss2);
+    cy.get('input[formcontrolname="pincode"]').should('be.visible').type(checkoutData.pincode);
+    cy.get('input[formcontrolname="state"]').should('be.visible').type(checkoutData.state);
+  });
+
+
+
+
  Cypress.Commands.add('deleteCartAPI', (userId) => {
     cy.request({
       method: 'DELETE',
