@@ -1,4 +1,7 @@
 {
+  "userid": 9744,
   "username": "ivanrod",
-  "password": "5PuUdthr@deek"
+  "password": "5PuUdthr@deek",
+  "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaXZhbnJvZCIsInN1YiI6IlVzZXIiLCJqdGkiOiJjZGMwYzFmNC05NTA2LTRjN2QtOGEwMC1iMzY4Y2VkYmNkNmYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwidXNlcklkIjoiOTc0NCIsImV4cCI6MTc1MDIxMDczNSwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzNjQvIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzNjQvIn0.P24VOdTqmMSJFpzslagHMTT_OSrEbLSOmWibpKw6cek"
+
 }

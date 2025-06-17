@@ -3,7 +3,6 @@ class CommonObjects
 
     Contains(content)
     {
-        // let _content = _content || Contents.Content1;
         cy.contains(content).should('be.visible');
     }
 
